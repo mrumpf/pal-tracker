@@ -17,6 +17,7 @@ public class WelcomeController {
     public String sayHello() {
         return message;
     }
+
     @GetMapping(path = "/crash")
     public String justCrash() {
         System.exit(1);
