@@ -30,7 +30,7 @@ run:
     find .
     mysql -uroot < src/main/resources/db/create_database.sql
     chmod +x gradlew
-    ./gradlew -P version=$(cat ../version/number) devMigrate testMigrate clean build || (service mysql stop && exit 1)
+    ./gradlew -P version=$(cat ../version/number) devMigrate testMigrate clean build --debug || (service mysql stop && exit 1)
     service mysql stop
 
     cp build/libs/pal-tracker-*.jar ../build-output
