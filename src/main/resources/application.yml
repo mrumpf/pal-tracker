@@ -1,2 +1,4 @@
 PORT: 8080
 WELCOME_MESSAGE: hi
+flyway:
+  init-sqls: classpath:db/create_databases.sql
