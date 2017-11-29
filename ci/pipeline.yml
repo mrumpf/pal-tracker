@@ -1,16 +1,5 @@
 ---
-resource_types:
-- name: slack-notification
-  type: docker-image
-  source:
-    repository: cfcommunity/slack-notification-resource
-
 resources:
-- name: slack-alert
-  type: slack-notification
-  source:
-    url: https://hooks.slack.com/services/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
-
 - name: pal-tracker
   type: git
   source:

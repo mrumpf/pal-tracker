@@ -5,6 +5,9 @@ cf-api-url: CF_API_URL
 cf-username: CF_USERNAME
 cf-password: CF_PASSWORD
 cf-org: CF_ORG
+cf-database: tracker_dev
+cf-database-user: tracker
+cf-database-password: 
 github-repository: git@github.com:GITHUB_USERNAME/pal-tracker.git
 github-private-key: |
   -----BEGIN RSA PRIVATE KEY-----
