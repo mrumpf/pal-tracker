@@ -29,6 +29,7 @@ run:
     cd pal-tracker
     find .
     mysql -uroot < src/main/resources/db/create_database.sql
+    mysql -uroot tracker_dev -e "describe time_entries;"
     chmod +x gradlew
     ./gradlew -P version=$(cat ../version/number) testMigrate clean build || (service mysql stop && exit 1)
     service mysql stop
