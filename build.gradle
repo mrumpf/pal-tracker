@@ -43,3 +43,7 @@ flyway {
 task testMigrate(type: FlywayMigrateTask) {
     url = testDbUrl
 }
+
+task devMigrate(type: FlywayMigrateTask) {
+    url = developmentDbUrl
+}
