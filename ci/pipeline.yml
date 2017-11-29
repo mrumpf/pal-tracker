@@ -92,7 +92,3 @@ jobs:
       path: pal-tracker-artifacts/pal-tracker-*.jar
       environment_variables:
         WELCOME_MESSAGE: "Hello from the production environment"
-  - put: slack-alert
-    params:
-      channel: '#boulder-nov27-2017'
-      text: pal-tracker deployed to production
