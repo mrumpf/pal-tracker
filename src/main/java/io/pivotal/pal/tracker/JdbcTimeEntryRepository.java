@@ -9,6 +9,7 @@ import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
 import static java.sql.Statement.RETURN_GENERATED_KEYS;
@@ -52,7 +53,10 @@ public class JdbcTimeEntryRepository implements TimeEntryRepository {
 
     @Override
     public List<TimeEntry> list() {
-        return jdbcTemplate.query("SELECT id, project_id, user_id, date, hours FROM time_entries", mapper);
+        List<TimeEntry> list = jdbcTemplate.query("SELECT id, project_id, user_id, date, hours FROM time_entries", mapper);
+        if (list == null)
+            list = new ArrayList<>();
+        return list;
     }
 
     @Override
